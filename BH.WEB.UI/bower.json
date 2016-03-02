@@ -1,0 +1,28 @@
+{
+	"name": "brainhubs",
+	"description": "",
+	"main": "index.js",
+	"authors": [
+		"Vitalik <vitalicset@yandex.ru>"
+	],
+	"license": "ISC",
+	"homepage": "https://github.com/vitalics/BrainHubs",
+	"moduleType": [
+		"es6"
+	],
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	],
+	"dependencies": {
+		"angular": "angular2#^1.5.0",
+		"bootstrap": "^3.3.6",
+		"angular-material": "^1.0.5"
+	},
+	"devDependencies": {
+		"angular": "^1.5.0"
+	}
+}
