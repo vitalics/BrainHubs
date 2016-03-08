@@ -48,10 +48,9 @@
 					<div ng-controller="appCtrl as ctrl" ng-cloak="" class="menuBardemoBasicUsage">
 						<md-toolbar class="md-menu-toolbar">
 							<div layout="row">
-
 								<div>
 									<h2 class="md-toolbar-tools">Latest news</h2>
-									<md-menu-bar role="menubar">
+									<md-menu-bar>
 										<md-menu>
 											<md-button ng-click="ctrl.sampleAction('share', $event)">
 												Share...
@@ -62,7 +61,6 @@
 								</div>
 							</div>
 						</md-toolbar>
-
 						<div class="page-container">
 							<div class="page">
 								<!--cards-->
@@ -83,9 +81,12 @@
 											<md-button class="md-icon-button" aria-label="Favorite">
 												<md-icon md-svg-icon="bower_components/angular-material/demos/toolbar/demoBasicUsage/img/icons/favorite.svg"></md-icon>
 											</md-button>
-											<md-button class="md-icon-button" aria-label="Settings">
-												<md-icon md-svg-icon="bower_components/angular-material/demos/toolbar/demoBasicUsage/img/icons/menu.svg"></md-icon>
+											<md-button  class="md-icon-button" aria-label="Settings">
+												<md-icon  md-svg-icon="bower_components/angular-material/demos/toolbar/demoBasicUsage/img/icons/menu.svg"></md-icon>
 											</md-button>
+											<md-button href="Pages/news/newsPage.html" class="md-icon-button" aria-label="Menu">
+												<md-icon md-svg-icon="bower_components/angular-material/demos/toolbar/demoBasicUsage/img/icons/menu.svg"></md-icon>
+												</md-button>
 										</md-card-actions>
 									</md-card>
 								</div>
@@ -143,6 +144,7 @@
 	<script src="bower_components/angular-messages/angular-messages.min.js"></script>
 	<script src="js/app.ts"></script>
 	<script src="js/navbar.ts"></script>
+	<script src="js/newsPage.js"></script>
 </body>
 
 </html>
