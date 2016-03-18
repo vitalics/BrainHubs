@@ -2,17 +2,15 @@
 
 <head>
 	<link rel="shortcut icon" href="assets/img/logo.ico">
-	<link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
+	<base href="/">
 </head>
 
 <body>
-	<!--<bh-topbar></bh-topbar>-->
-	<bh-news-card></bh-news-card>
+	<ui-view></ui-view>
+	<h1>Layout</h1>
 
 	<script src="bower_components/angular/angular.js"></script>
-	<script src="bower_components/angular-aria/angular-aria.js"></script>
-	<script src="bower_components/angular-animate/angular-animate.js"></script>
-	<script src="bower_components/angular-material/angular-material.js"></script>
+	<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
 	<script src="build/bundle.js"></script>
 	<script src="build/templates.js"></script>
 </body>
