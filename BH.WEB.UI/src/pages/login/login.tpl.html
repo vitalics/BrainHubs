@@ -1,1 +1,21 @@
-<h1>This is login page!!</h1>
+<!--TODO: send information on server in action-->
+
+<form>
+	<md-input-container class="md-block">
+		<label>Your email or login</label>
+		<input ng-model="vm.login" required type="text" name="your email" />
+	</md-input-container>
+	<br/>
+	<md-input-container class="md-block">
+		<label>Your password</label>
+		<input ng-model="vm.password" required type="password" name="your password" />
+	</md-input-container>
+	<!--<div class="row">
+		<label>enter your password</label>
+		<input ng-model="vm.password" type="password">
+	</div>-->
+
+	<br/>
+	 <md-button ng-click="vm.submit()" class="md-raised md-primary">Submit</md-button>
+	<!--<md-button ng-click="vm.submit()"> Submit</md-button>-->
+</form>

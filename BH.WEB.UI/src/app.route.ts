@@ -15,11 +15,9 @@ function getStates() {
 			state: 'app',
 			config: {
 				url: '/',
-				templateProvider: ($templateCache: ng.ITemplateCacheService) => {
-					return $templateCache.get('../index.html');
-				},
-				controller: ()=>{
-					
+				templateUrl: 'src/app.tpl.html',
+				controller: () => {
+
 				},
 				title: 'app',
 			}
