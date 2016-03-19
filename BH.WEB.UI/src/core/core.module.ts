@@ -1,5 +1,6 @@
 import './templates/templates.module';
 import './card/card.module';
+import './topbar/topbar.module';
 
 import {configureStates} from './core.route';
 
@@ -10,5 +11,6 @@ angular
 
 		'app.core.templates',
 		'app.core.card',
+		'app.core.topbar'
 	])
 	.config(configureStates);

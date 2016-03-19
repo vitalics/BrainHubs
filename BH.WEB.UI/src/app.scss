@@ -1,0 +1,14 @@
+@import "pages/login/login.scss";
+
+body {
+	overflow: hidden;
+	
+	.content {
+		position: absolute;
+		overflow-y: auto;
+		left: 250px;
+		right: 0;
+		top: 45px;
+		bottom: 0;
+	}
+}
