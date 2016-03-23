@@ -1,0 +1,31 @@
+<bh-topbar></bh-topbar>
+<section>
+    <h1 class="md-headline">REGISTER FORM</h1>
+    <form>
+        <md-input-container class="md-block">
+            <label>Your email</label>
+            <input ng-model="vm.email" required type="text" name="your email" />
+        </md-input-container>
+        <br/>
+
+        <md-input-container class="md-block">
+            <label>Your login</label>
+            <input ng-model="vm.login" required type="text" name="your login" />
+        </md-input-container>
+        <br/>
+
+        <md-input-container class="md-block">
+            <label>Your password</label>
+            <input ng-model="vm.password" required type="password" name="your password" />
+        </md-input-container>
+        <br/>
+
+        <md-input-container class="md-block">
+            <label>confirm password</label>
+            <input ng-model="vm.confirmPassword" required type="text" name="confirm password" />
+        </md-input-container>
+        <br/>
+
+        <md-button ng-click="vm.submit()" class="md-raised md-primary">Create Account</md-button>
+    </form>
+</section>

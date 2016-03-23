@@ -1,18 +1,14 @@
 <md-toolbar>
-	<div class="md-toolbar-tools">
-		<md-button class="md-icon-button" aria-label="Settings">
-			<md-icon md-svg-icon="./../../../bower_components/angular-material/demos/toolbar/demoBasicUsage/img/icons/menu.svg"></md-icon>
-		</md-button>
-		<md-button aria-label="Go Back" ng-href="/login">Login/Register</md-button>
-		<h2>
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" aria-label="Settings">
+            <md-icon md-svg-icon="./../../../bower_components/angular-material/demos/toolbar/demoBasicUsage/img/icons/menu.svg"></md-icon>
+        </md-button>
+        <h2 layout="row" flex layout-align="center">
+          <a href="/">
           <span>Brain Hubs</span>
+          </a>
         </h2>
-		<span flex></span>
-		<md-button class="md-icon-button" aria-label="Favorite">
-			<md-icon md-svg-icon="./../../../bower_components/angular-material/demos/toolbar/demoBasicUsage/img/icons/favorite.svg" style="color: greenyellow;"></md-icon>
-		</md-button>
-		<md-button class="md-icon-button" aria-label="More">
-			<md-icon md-svg-icon="./../../../bower_components/angular-material/demos/toolbar/demoBasicUsage/img/icons/more_vert.svg"></md-icon>
-		</md-button>
-	</div>
+        <md-button aria-label="Go Back" ng-href="/login" layout-align="end">Login</md-button>
+        <md-button aria-label="Go Back" ng-href="/register" layout-align="end">Register</md-button>
+    </div>
 </md-toolbar>
