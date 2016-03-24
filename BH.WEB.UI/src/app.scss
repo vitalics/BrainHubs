@@ -1,4 +1,5 @@
 @import "pages/login/login.scss";
+@import 'core/pageContent/pageContent.scss';
 
 body {
 	overflow: hidden;
@@ -6,9 +7,9 @@ body {
 	.content {
 		position: absolute;
 		overflow-y: auto;
-		left: 250px;
+		left: 0px;
 		right: 0;
-		top: 45px;
+		
 		bottom: 0;
 	}
 }

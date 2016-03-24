@@ -1,7 +1,7 @@
 import './templates/templates.module';
-import './card/card.module';
 import './topbar/topbar.module';
-import './sidenav/sidenav.module';
+import './pageContent/pageContent.module';
+
 
 import {configureStates} from './core.route';
 
@@ -11,9 +11,7 @@ angular
         'ngMaterial',
 
         'app.core.templates',
-        'app.core.card',
         'app.core.topbar',
-        'app.core.sidenav'
-
+        'app.core.content'
     ])
     .config(configureStates);

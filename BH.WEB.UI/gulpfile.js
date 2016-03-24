@@ -8,7 +8,7 @@ gulp.task('templatecache', function() {
         .pipe(templateCache(
             config.templateCache.file,
             config.templateCache.options
-		))
+        ))
         .pipe(gulp.dest(config.temp));
 });
 
@@ -18,11 +18,11 @@ gulp.task('sass', function() {
         .pipe(gulp.dest('./build'));
 });
 
-gulp.task('sass:watch', function () {
+gulp.task('sass:watch', function() {
     gulp.watch('./src/**/*.scss', ['sass']);
 });
 
-gulp.task('default', ['templatecache'])
+gulp.task('default', ['templatecache', 'sass'])
 
 var config = {
     htmltemplates: 'src/**/*.html',

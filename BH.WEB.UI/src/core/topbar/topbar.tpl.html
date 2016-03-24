@@ -1,14 +1,18 @@
 <md-toolbar>
     <div class="md-toolbar-tools">
-        <md-button class="md-icon-button" aria-label="Settings">
+        <!--<md-button class="md-icon-button" aria-label="Settings">
             <md-icon md-svg-icon="./../../../bower_components/angular-material/demos/toolbar/demoBasicUsage/img/icons/menu.svg"></md-icon>
-        </md-button>
-        <h2 layout="row" flex layout-align="center">
+        </md-button>-->
+        <span flex></span>
+        <h2 layout-align="end center">
           <a href="/">
           <span>Brain Hubs</span>
           </a>
         </h2>
-        <md-button aria-label="Go Back" ng-href="/login" layout-align="end">Login</md-button>
-        <md-button aria-label="Go Back" ng-href="/register" layout-align="end">Register</md-button>
+        <span flex></span>
+        <div layout="row" layout-align="end center">
+            <md-button aria-label="Go Back" ng-href="/login">Login</md-button>
+            <md-button aria-label="Go Back" ng-href="/register">Register</md-button>
+        </div>
     </div>
 </md-toolbar>
