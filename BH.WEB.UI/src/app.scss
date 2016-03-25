@@ -1,15 +1,2 @@
 @import "pages/login/login.scss";
 @import 'core/pageContent/pageContent.scss';
-
-body {
-	overflow: hidden;
-	
-	.content {
-		position: absolute;
-		overflow-y: auto;
-		left: 0px;
-		right: 0;
-		
-		bottom: 0;
-	}
-}

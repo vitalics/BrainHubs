@@ -8,7 +8,6 @@ import {configureStates} from './app.route';
 
 angular
     .module('app', [
-
         'app.core',
 
         'app.pages.login',
