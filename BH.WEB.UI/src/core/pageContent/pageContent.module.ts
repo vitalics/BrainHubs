@@ -6,6 +6,6 @@ import { PageContentDirective } from './pageContent.directive';
 angular
     .module('app.core.content', [
         'app.core.sidenav',
-        'app.core.card'
+        'app.core.card',
     ])
     .directive('bhPageContent', PageContentDirective.create());

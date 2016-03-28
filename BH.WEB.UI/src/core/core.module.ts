@@ -12,6 +12,6 @@ angular
 
         'app.core.templates',
         'app.core.topbar',
-        'app.core.content'
+        'app.core.content',
     ])
     .config(configureStates);

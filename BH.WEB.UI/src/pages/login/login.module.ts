@@ -1,13 +1,7 @@
-import '../../core/core.module';
-import '../../core/topbar/topbar.module'
-
-import {configureStates} from './login.route';
 import {LoginController} from './login.controller';
+import { configureStates } from './login.route';
 
 angular
-    .module('app.pages.login', [
-        'app.core'
-
-    ])
+    .module('app.pages.login', [])
     .controller('LoginController', LoginController)
     .config(configureStates);

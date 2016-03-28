@@ -5,7 +5,7 @@
         </md-card-avatar>
         <md-card-header-text>
             <span class="md-title">Title</span>
-            <span class="md-subhead">Sub header</span>
+            <span class="md-subhead">#Tags</span>
         </md-card-header-text>
     </md-card-header>
     <md-card-title>
@@ -21,8 +21,10 @@
         </p>
     </md-card-content>
     <md-card-actions layout="row" layout-align="start center">
-        <md-button>Action 1</md-button>
-        <md-button>Action 2</md-button>
+        <md-button ng-click="ctrl.showNews()">Show news</md-button>
+        <md-button class="md-icon-button" aria-label="Favirite">
+            <md-icon md-svg-icon="./../../../bower_components/angular-material/demos/toolbar/demoBasicUsage/img/icons/favorite.svg"></md-icon>
+        </md-button>
         <md-card-icon-actions>
             <md-button class="md-icon-button" aria-label="icon">
                 <md-icon md-svg-icon="icon"></md-icon>
