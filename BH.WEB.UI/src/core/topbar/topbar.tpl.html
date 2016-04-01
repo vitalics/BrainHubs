@@ -1,6 +1,7 @@
 <md-toolbar layout="column" tabindex="-1" role="main" flex>
     <div class="md-toolbar-tools">
-        <!--<md-button class="md-icon-button" aria-label="Settings">
+        <bh-burger-button></bh-burger-button>
+        <!--<md-button ng-click="ctrl.toggleMenu()" class="md-icon-button" aria-label="Settings" hide-gt-sm>
             <md-icon md-svg-icon="./../../../bower_components/angular-material/demos/toolbar/demoBasicUsage/img/icons/menu.svg"></md-icon>
         </md-button>-->
         <span flex></span>
@@ -10,10 +11,9 @@
           </a>
         </h2>
         <span flex></span>
-        <div layout="row" layout-align="end center">
+        <div class="login" layout="row" layout-align="center center" style="margin-top: 0px;">
             <md-button ng-href="/login" aria-label="Go Back">Login</md-button>
             <md-button aria-label="Go Back" ng-href="/register">Register</md-button>
         </div>
     </div>
 </md-toolbar>
-<bh-login></bh-login>

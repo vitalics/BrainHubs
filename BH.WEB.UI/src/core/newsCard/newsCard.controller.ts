@@ -5,6 +5,8 @@ export class CardController {
         '$mdMedia',
     ];
 
+    private _isFavorite: boolean;
+
     constructor(
         private _$scope: ng.IScope,
         private _$mdDialog: ng.material.IDialogService,
@@ -17,15 +19,13 @@ export class CardController {
         // $mdMedia('xs') || $mdMedia('sm')
 
         this._$mdDialog.show({
-            controller: DialogController,
-            templateUrl: 'core/news/news.tpl.html',
+            templateUrl: 'core/newsDialog/newsDialog.tpl.html',
             parent: angular.element(document.body),
             clickOutsideToClose: true,
         });
-
-        function DialogController(): any {
-            // this._$mdDialog.hide();
-            // this._$mdDialog.cancel();
-        }
     }
+
+    // public isFavorite(): void {
+    //     this._isFavorite = !this._isFavorite;
+    // }
 }

@@ -1,13 +1,13 @@
 export class TopbarController {
     public static $inject: Array<string> = ['$mdSidenav'];
 
-    constructor(private _$mdSidenav: any) {
+    public contoller: string = "TopbarController";
+    public controllerAs: string = "ctrl";
+
+    constructor(private _$mdSidenav: ng.material.ISidenavService) {
     }
 
-    public isOpenMenut(): any {
-        return this._$mdSidenav('right').isOpen();
-    }
-    public toggeMenu(): any {
-        return this._$mdSidenav('right').toggle();
+    public toggleMenu(): void {
+        this._$mdSidenav('left').toggle();
     }
 }

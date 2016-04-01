@@ -1,3 +1,22 @@
-div md-sidenav md-content md-button {
- margin-top: 5%;   
-}
+$top: 64px;
+// md-sidenav md-content md-button {
+//  margin-top: 5dp;   
+// }
+ md-sidenav{
+     height: 90%;
+     margin-right: 0;
+     
+     position: static;
+     top: $top;
+     left: 0;
+     
+     z-index: 10;
+
+ }
+ 
+ md-sidenav md-sidenav md-list md-list-item md-button{
+     width: 100%;
+     margin-left: 100%;
+     margin-right: 100%;
+     padding: 100%;
+ }

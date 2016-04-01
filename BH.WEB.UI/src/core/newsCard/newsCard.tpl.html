@@ -1,0 +1,33 @@
+<div class="bh-card">
+    <md-card flex class="col-xs-6 col-lg-4 md-whiteframe-4dp">
+        <md-card-header>
+            <md-card-avatar>
+                <img class="md-user-avatar" src="../../../assets/img/tutby.png">
+            </md-card-avatar>
+            <md-card-header-text>
+                <span class="md-title">Title</span>
+                <span class="md-subhead">#Tags</span>
+            </md-card-header-text>
+        </md-card-header>
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">Card headline</span>
+                <br/>
+            </md-card-title-text>
+        </md-card-title>
+        <br/>
+        <md-card-content>
+            <p>
+                Card Content.
+            </p>
+        </md-card-content>
+        <md-card-actions layout="row" layout-align="start center">
+            <md-button ng-click="ctrl.showNews()">Show news</md-button>
+            <md-button class="md-icon-button" aria-label="Favirite">
+                <md-icon ng-class="{'favorite': !isActive, 'md-primary active': isActive}" ng-init="isActive = false" ng-click="isActive = !isActive"
+                class="lol" md-svg-icon="./../../../bower_components/angular-material/demos/toolbar/demoBasicUsage/img/icons/favorite.svg"
+                aria-disabled="true"></md-icon>
+            </md-button>
+        </md-card-actions>
+    </md-card>
+</div>

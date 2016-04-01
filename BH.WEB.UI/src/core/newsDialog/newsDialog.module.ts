@@ -1,6 +1,6 @@
 // import { NewsController } from './news.controller';
-import '../topbar/topbar.module';
+//import '../topbar/topbar.module';
 
 angular
-    .module('app.core.news', [])
+    .module('app.core.dialog', [])
     // .controller('NewsController', NewsController)

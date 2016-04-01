@@ -1,4 +1,4 @@
-import '../card/card.module';
+import '../newsCard/newsCard.module';
 import '../sidenav/sidenav.module';
 
 import { PageContentDirective } from './pageContent.directive';

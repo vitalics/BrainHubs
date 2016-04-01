@@ -1,12 +1,9 @@
-import '../topbar/topbar.module';
 
 import { ButtonDirective } from './button.directive';
 import { TopbarController} from './button.controller';
 
 
 angular
-    .module('app.core.button', [
-        'app.core'
-    ])
+    .module('app.core.button', [])
     .controller('TopbarController', TopbarController)
     .directive('bhBurgerButton', ButtonDirective.create());
