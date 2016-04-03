@@ -1,7 +1,9 @@
 @import '../sidenav/sidenav.scss';
 
+$topMargin: 4.5%;
+
 div[layout = "row"]{
-    margin-top: 64px;
+    margin-top: $topMargin;
     margin-left: 0;
     padding-left: 0;
     padding-right: 0;

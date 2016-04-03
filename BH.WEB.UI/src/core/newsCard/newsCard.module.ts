@@ -1,5 +1,5 @@
 import '../newsDialog/newsDialog.module';
-import { CardController } from './newsCard.controller';
+import {CardController} from './newsCard.controller';
 import {CardDirective} from './newsCard.directive';
 
 angular

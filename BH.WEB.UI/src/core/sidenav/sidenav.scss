@@ -1,13 +1,14 @@
 $top: 64px;
+$topMargin:4.5%;
 // md-sidenav md-content md-button {
 //  margin-top: 5dp;   
 // }
  md-sidenav{
-     height: 90%;
+     height: 100%;
      margin-right: 0;
      
      position: static;
-     top: $top;
+     top: $topMargin;
      left: 0;
      
      z-index: 10;
