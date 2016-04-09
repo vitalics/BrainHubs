@@ -1,23 +1,24 @@
 $top: 64px;
 $topMargin:4.5%;
+$sidenavTopMargin: 100%;
+$sidenavList:80%;
 // md-sidenav md-content md-button {
 //  margin-top: 5dp;   
 // }
- md-sidenav{
+ md-sidenav[role="main"]{
      height: 100%;
+     
      margin-right: 0;
      
      position: static;
      top: $topMargin;
      left: 0;
-     
-     z-index: 10;
-
- }
+ };
+  md-sidenav.sidenav{
+      height: 80%;
+  };
  
- md-sidenav md-sidenav md-list md-list-item md-button{
-     width: 100%;
-     margin-left: 100%;
-     margin-right: 100%;
-     padding: 100%;
- }
+md-list[layout="column"][layout-align="center center"]{
+     margin-top: $topMargin;
+ };
+

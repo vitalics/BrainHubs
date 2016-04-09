@@ -1,29 +1,20 @@
-<md-dialog aria-label="Mango (Fruit)" ng-cloak>
+<md-dialog aria-label="" ng-cloak>
     <form>
         <md-toolbar>
             <div class="md-toolbar-tools">
-                <h2>Mango (Fruit)</h2>
+                <h2 ng-bind="title"></h2>
                 <span flex></span>
             </div>
         </md-toolbar>
         <md-dialog-content>
             <div class="md-dialog-content">
-                <h2>Md dialog</h2>
+                <h2>{{$ctrl.title}}</h2>
                 <p>
-                    lol
-                </p>
-                <p>
-                    LOL
-                </p>
-                <p>
-                    lol1
+                    {{$ctrl.text}}
                 </p>
             </div>
         </md-dialog-content>
         <md-dialog-actions layout="row">
-            <md-button href="http://en.wikipedia.org/wiki/Mango" target="_blank" md-autofocus>
-                More on Wikipedia
-            </md-button>
             <span flex></span>
             <md-button>
                 Not Useful

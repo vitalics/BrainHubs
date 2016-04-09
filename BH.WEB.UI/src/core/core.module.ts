@@ -9,6 +9,7 @@ angular
     .module('app.core', [
         'ui.router',
         'ngMaterial',
+        'angular.filter',
 
         'app.core.templates',
         'app.core.topbar',

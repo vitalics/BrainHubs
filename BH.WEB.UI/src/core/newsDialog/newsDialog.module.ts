@@ -1,6 +1,5 @@
-// import { NewsController } from './news.controller';
-//import '../topbar/topbar.module';
+import { NewsDialogController } from './newsDialog.controller';
 
 angular
     .module('app.core.dialog', [])
-    // .controller('NewsController', NewsController)
+    .controller('NewsDialogController', NewsDialogController);

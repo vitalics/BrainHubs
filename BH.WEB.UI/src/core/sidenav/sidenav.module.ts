@@ -1,5 +1,7 @@
-import {SidenavDirective} from './sidenav.directive';
+import { Sidenav } from './sidenav';
+import { SidenavController } from './sidenav.controller';
 
 angular
     .module('app.core.sidenav', [])
-    .directive('bhSidenav', SidenavDirective.create());
+    .controller('SidenavController', SidenavController)
+    .component('bhSidenav', new Sidenav());

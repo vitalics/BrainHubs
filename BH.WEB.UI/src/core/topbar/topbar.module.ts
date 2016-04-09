@@ -1,10 +1,10 @@
 import '../burgerbutton/button.module';
 
-import {TopBarDirective} from './topbar.directive';
+import {Topbar} from './topbar';
 import { TopbarController } from './topbar.controller';
 
 
 angular
     .module('app.core.topbar', ['app.core.button'])
     .controller('TopbarController', TopbarController)
-    .directive('bhTopbar', TopBarDirective.create());
+    .component('bhTopbar', new Topbar());

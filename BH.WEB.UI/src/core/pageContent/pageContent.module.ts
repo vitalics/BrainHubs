@@ -1,11 +1,13 @@
 import '../newsCard/newsCard.module';
 import '../sidenav/sidenav.module';
 
-import { PageContentDirective } from './pageContent.directive';
+import { PageContentController } from './pageContent.contoller';
+import { PageContent } from './pageContent';
 
 angular
     .module('app.core.content', [
         'app.core.sidenav',
         'app.core.card',
     ])
-    .directive('bhPageContent', PageContentDirective.create());
+    .controller('PageContentController', PageContentController)
+    .component('bhPageContent', new PageContent());
