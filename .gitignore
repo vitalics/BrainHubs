@@ -242,3 +242,5 @@ dist
 .sass-cache
 bower_components
 typings
+build
+Fakes
