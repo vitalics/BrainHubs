@@ -23,7 +23,7 @@ export class NewsRepository implements INewsRepository {
         }
     ];
 
-    private _tags: string[] = ["tag1", "tag2", "tag3", "tag4", "tag5", "tag6", "tag7", "tag8", "tag9"];
+    private _categories: string[] = ["cat1", "cat2", "cat3", "cat4", "cat5", "cat6", "cat7", "cat8", "cat9"];
 
     constructor(
         private _$http: ng.IHttpService,
@@ -46,7 +46,7 @@ export class NewsRepository implements INewsRepository {
         let deffer = this._$q.defer();
 
         this._$timeout(() => {
-            deffer.resolve(this._tags);
+            deffer.resolve(this._categories);
         });
 
         return deffer.promise;

@@ -8,6 +8,7 @@ export class CardController {
     public title: string;
     public tags: string[];
     public text: string;
+    public categories: string[];
 
     constructor(
         private _$mdDialog: ng.material.IDialogService,
@@ -20,16 +21,19 @@ export class CardController {
         console.log(tag);
     }
 
-    public showNews(id: string): ng.IPromise<any> {
-        // $mdMedia('xs') || $mdMedia('sm')
-        return this._$mdDialog.show({
-            templateUrl: 'core/newsDialog/newsDialog.tpl.html',
-            parent: angular.element(document.body),
-            clickOutsideToClose: true,
-        });
-    }
+    public showNews(): ng.IPromise<any> {
 
-    // public isFavorite(): void {
-    //     this._isFavorite = !this._isFavorite;
-    // }
+        let news = this._$mdDialog.alert()
+            .title(this.title)
+            .textContent(this.text)
+            .ok("OK")
+            .clickOutsideToClose(true);
+
+        let showNews = this._$mdDialog.show(news).finally(() => {
+            news = undefined;
+        });
+        console.log("news id" + this.id);
+        return showNews;
+        // $mdMedia('xs') || $mdMedia('sm')
+    }
 }

@@ -5,17 +5,17 @@ export class SidenavController {
         'NewsRepository'
     ];
 
-    public tags: string[];
+    public categories: string[];
 
     constructor(
         private _newsRepository: INewsRepository
     ) {
-        this._newsRepository.getTags().then((tags) => {
-            this.tags = tags;
+        this._newsRepository.getTags().then((categories) => {
+            this.categories = categories;
         });
     }
 
-    public tagClick(tag: string) {
-        console.log(tag);
+    public categoriesClick(categories: string) {
+        console.log(categories);
     }
 }
