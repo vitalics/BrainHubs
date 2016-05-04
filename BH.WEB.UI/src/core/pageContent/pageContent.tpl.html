@@ -1,9 +1,10 @@
 <div layout="row" flex>
     <bh-sidenav></bh-sidenav>
+
     <!--<md-content layout="column" id="card" flex class="md-padding">-->
     <md-content id="content" flex>
-        <div ng-repeat="card in $ctrl.news">
-            <bh-news-card id="card.id" title="card.title" text="card.text" tags="card.tags"></bh-news-card>
+        <div ng-repeat="card in $ctrl.news| orderBy: $ctrl.sortedString">
+            <bh-news-card id="card.id" categories="card.categories" title="card.title" text="card.text" tags="card.tags" callback="$ctrl.onSorted(sortedString)"></bh-news-card>
         </div>
     </md-content>
 </div>

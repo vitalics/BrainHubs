@@ -4,7 +4,9 @@ export class Card {
     public bindings: any = {
         id: '<',
         title: '<',
+        categories: '<',
         tags: '<',
         text: '<',
+        callback: '&'
     };
 }

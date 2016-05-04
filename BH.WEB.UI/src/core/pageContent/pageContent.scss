@@ -2,12 +2,14 @@
 @import '../newsCard/newsCard.scss';
 
 $topMargin: 4.5%;
+$top: 64px;
 
 div[layout = "row"]{
-    margin-top: $topMargin;
+    margin-top: $top;
     margin-left: 0;
     padding-left: 0;
     padding-right: 0; 
+    height: 100%;
 }
 md-content[id="content"]{
     margin-left: 3%;

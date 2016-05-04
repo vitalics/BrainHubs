@@ -1,7 +1,6 @@
 export class CardController {
     public static $inject: Array<string> = [
         '$mdDialog',
-        '$mdMedia',
     ];
 
     public id: string;
@@ -9,31 +8,29 @@ export class CardController {
     public tags: string[];
     public text: string;
     public categories: string[];
+    public callback: Function
 
     constructor(
-        private _$mdDialog: ng.material.IDialogService,
-        private _$mdMedia: ng.material.IMedia
-    ) {
-
+        private _$mdDialog: ng.material.IDialogService
+    ) { }
+    public tagClick(): void {
+        this.callback({
+            sortedString: 'tags'
+        });
     }
-
-    public tagClick(tag: string) {
-        console.log(tag);
+    public categoriesClick() {
+        this.callback({
+            sortedString: 'categories'
+        });
     }
-
     public showNews(): ng.IPromise<any> {
-
         let news = this._$mdDialog.alert()
             .title(this.title)
             .textContent(this.text)
-            .ok("OK")
-            .clickOutsideToClose(true);
-
-        let showNews = this._$mdDialog.show(news).finally(() => {
-            news = undefined;
-        });
-        console.log("news id" + this.id);
+            .clickOutsideToClose(true)
+            .ok('cancel')
+            .ok('OK');
+        let showNews = this._$mdDialog.show(news);
         return showNews;
-        // $mdMedia('xs') || $mdMedia('sm')
     }
 }

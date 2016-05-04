@@ -7,6 +7,7 @@ export class PageContentController {
     ];
 
     public news: any[];
+    public sortedString: string;
 
     constructor(
         private _newsRepository: INewsRepository,
@@ -17,5 +18,9 @@ export class PageContentController {
             console.log("This is news!");
             _$timeout();
         });
+    }
+//callback function
+    public onSorted(sortedString) {
+        this.sortedString = sortedString;
     }
 }

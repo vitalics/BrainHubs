@@ -1,8 +1,19 @@
 var gulp = require("gulp");
 var templateCache = require('gulp-angular-templatecache');
 var sass = require('gulp-sass');
+var webpack = require('gulp-webpack');
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
+var del = require('del');
 
-gulp.task('templatecache', function() {
+
+gulp.task('webpack', function () {
+    return gulp.src('build/bundle.js')
+        .pipe(webpack())
+        .pipe(gulp.dest('build/'));
+});
+
+gulp.task('templatecache', function () {
     return gulp
         .src(config.htmltemplates)
         .pipe(templateCache(
@@ -12,13 +23,13 @@ gulp.task('templatecache', function() {
         .pipe(gulp.dest(config.temp));
 });
 
-gulp.task('sass', function() {
+gulp.task('sass', function () {
     gulp.src('./src/app.scss')
         .pipe(sass())
         .pipe(gulp.dest('./build'));
 });
 
-gulp.task('sass:watch', function() {
+gulp.task('sass:watch', function () {
     gulp.watch('./src/**/*.scss', ['sass']);
 });
 

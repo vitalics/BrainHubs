@@ -2,23 +2,33 @@ $top: 64px;
 $topMargin:4.5%;
 $sidenavTopMargin: 100%;
 $sidenavList:80%;
+$marginButton: 25px;
 // md-sidenav md-content md-button {
 //  margin-top: 5dp;   
 // }
- md-sidenav[role="main"]{
-     height: 100%;
+ md-sidenav.main{
+     height: 95%;
      
      margin-right: 0;
      
      position: static;
-     top: $topMargin;
+     margin-top: 0;
      left: 0;
+     overflow: auto;
  };
-  md-sidenav.sidenav{
-      height: 80%;
+   md-sidenav.header{
+      height: 90%;
+      margin-top: $top;
+  };
+  md-content.sidenav{
+      height: 25%;
+      overflow-y: auto;
+      margin-bottom: $marginButton;
   };
  
-md-list[layout="column"][layout-align="center center"]{
-     margin-top: $topMargin;
+md-list.list{
+     margin-top: 20;
+     width: 100%;
+     height: 50%;
  };
 

@@ -6,6 +6,7 @@ export class SidenavController {
     ];
 
     public categories: string[];
+    public callback: Function;
 
     constructor(
         private _newsRepository: INewsRepository
@@ -15,7 +16,9 @@ export class SidenavController {
         });
     }
 
-    public categoriesClick(categories: string) {
-        console.log(categories);
+    public categoriesClick(): void {
+        this.callback({
+            sortedstring: 'categories'
+        });
     }
 }

@@ -1,16 +1,19 @@
-<md-sidenav id="left" class="md-sidenav-left md-whiteframe-24dp " md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
+<md-sidenav id="left" class="main md-sidenav-left md-whiteframe-24dp " md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
 
     <header class="nav header">
         <md-toolbar>
-            <md-button layout-align="center center" class="md-toolbar-tools">
+            <md-button ng-click="filters.categories = ''" layout-align="center center" class="md-toolbar-tools">
                 Categories
             </md-button>
         </md-toolbar>
     </header>
 
-    <md-sidenav md-is-locked-open="$mdMedia('gt-sm')" class="md-whiteframe-9dp sidenav">
-        <md-list flex layout="column" layout-align="center center" ng-repeat="categories in $ctrl.categories">
+    <md-content flex md-is-locked-open="$mdMedia('gt-sm')" class="md-whiteframe-9dp sidenav">
+        <md-list class="list" layout="column" layout-allign="center center">
+            <md-button aria-label="lol" class="md-raised md-warn" ng-click="$ctrl.categoriesClick(categories)">recomemded</md-button>
+        </md-list>
+        <md-list class="list" layout="column" layout-align="center center" ng-repeat="categories in $ctrl.categories">
             <md-button aria-label="lol" class="md-raised md-primary" ng-bind="categories" ng-click="$ctrl.categoriesClick(categories)"></md-button>
         </md-list>
-    </md-sidenav>
+    </md-content>
 </md-sidenav>
