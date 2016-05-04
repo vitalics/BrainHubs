@@ -2,15 +2,15 @@
 
     <header class="nav header">
         <md-toolbar>
-            <md-button ng-click="filters.categories = ''" layout-align="center center" class="md-toolbar-tools">
-                Categories
+            <md-button layout-align="center center" class="md-toolbar-tools">
+                Категории
             </md-button>
         </md-toolbar>
     </header>
 
     <md-content flex md-is-locked-open="$mdMedia('gt-sm')" class="md-whiteframe-9dp sidenav">
         <md-list class="list" layout="column" layout-allign="center center">
-            <md-button aria-label="lol" class="md-raised md-warn" ng-click="$ctrl.categoriesClick(categories)">recomemded</md-button>
+            <md-button aria-label="lol" class="md-raised md-warn" ng-click="$ctrl.categoriesClick(categories)">рекомендуемые</md-button>
         </md-list>
         <md-list class="list" layout="column" layout-align="center center" ng-repeat="categories in $ctrl.categories">
             <md-button aria-label="lol" class="md-raised md-primary" ng-bind="categories" ng-click="$ctrl.categoriesClick(categories)"></md-button>

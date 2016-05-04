@@ -3,6 +3,10 @@
 
     <!--<md-content layout="column" id="card" flex class="md-padding">-->
     <md-content id="content" flex>
+        <div>
+            <h2>Рекомендуемые</h2>
+        </div>
+        <hr>
         <div ng-repeat="card in $ctrl.news| orderBy: $ctrl.sortedString">
             <bh-news-card id="card.id" categories="card.categories" title="card.title" text="card.text" tags="card.tags" callback="$ctrl.onSorted(sortedString)"></bh-news-card>
         </div>
