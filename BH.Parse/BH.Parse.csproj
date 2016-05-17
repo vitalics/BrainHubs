@@ -45,12 +45,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Captcha.cs" />
+    <Compile Include="DataNews.cs" />
+    <Compile Include="IPars.cs" />
+    <Compile Include="IParser.cs" />
     <Compile Include="Parser.cs" />
+    <Compile Include="ParsNavinyBy.cs" />
+    <Compile Include="ParsTproger.cs" />
+    <Compile Include="ParsTUTBY.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SearchKeywords.cs" />
   </ItemGroup>
   <ItemGroup>
     <Fakes Include="Fakes\HtmlAgilityPack.fakes" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
