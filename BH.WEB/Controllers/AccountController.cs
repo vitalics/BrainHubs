@@ -3,28 +3,31 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web.Http;
 
 namespace BH.WEB.Controllers
 {
     public class AccountController : ApiController
     {
-
-
-        // GET api/<controller>/5
-        public string Get(int id)
+        BD.BD bd = new BD.BD();
+        public bool Get(string login, string password)
         {
-            return "value";
+            if (bd.ChekAccount(login,password))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
-        // POST api/<controller>
-        public void Post([FromBody]string value)
+        public void PutRegistor(string header, string textNews, string keyword,
+         string image, string link, string nameCategory, int idReference)
         {
-        }
-
-        // PUT api/<controller>/5
-        public void Put(int id, [FromBody]string value)
-        {
+            bd.RecordNewsOne(header, textNews, keyword,
+                image, link, nameCategory, idReference);
         }
     }
 }

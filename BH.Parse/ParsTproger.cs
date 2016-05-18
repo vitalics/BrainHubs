@@ -74,7 +74,7 @@ namespace TestParserAndOther
 
             for (int i = 0; i < arrayKeyword.Length; i++)
             {
-                arrayKeyword[i] = keywords[i].Key;
+                arrayKeyword[i] = keywords[i];
             }
             stringKeywords = string.Join(null, arrayKeyword);
 

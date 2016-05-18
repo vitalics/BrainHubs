@@ -4,31 +4,28 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using BH.Parse;
 
 namespace BH.WEB.Controllers
 {
     public class NewsController : ApiController
     {
-        // GET api/<controller>
-        public IEnumerable<string> Get()
+        
+        BD.BD bd = new BD.BD();
+
+        public IEnumerable<DataNews> GetLastNews()
         {
-            return new string[] { "value1", "value2" };
+            return bd.GetNewsLast();
         }
 
-        // GET api/<controller>/5
-        public string Get(int id)
+        public IEnumerable<DataNews> GetLastNewsFoCategory(string category)
         {
-            return "value";
+            return bd.GetLastForCategory(category);
         }
 
-        // POST api/<controller>
-        public void Post([FromBody]string value)
+        public void PutLikeNews(int id, string email)
         {
-        }
-
-        // PUT api/<controller>/5
-        public void Put(int id, [FromBody]string value)
-        {
+            bd.RecordLikeNews(email, id);
         }
     }
 }
