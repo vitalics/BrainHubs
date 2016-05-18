@@ -57,9 +57,9 @@ namespace BD
           	builder(BDNews.Insertuser(post,login,password));
 
         }
-        public boll ChekLogin(string login)
+        public bool ChekLogin(string login)
         {
-        	boll result=false;
+        	bool result=false;
            if (builder(BDNews.SelectedLogin(login))!=null)
            result=true;
            
