@@ -9,7 +9,7 @@ namespace TestParserAndOther
 {
     class ParsTUTBY : IPars
     {
-        
+        BD.BD db = new BD.BD();
         private string url = "http://news.tut.by/";
         private string[] categories = { "politics", "economics", "society", "world", "sport" };
         const string site = "tut.by";
@@ -54,7 +54,9 @@ namespace TestParserAndOther
 
         private void Add(DataNews news)
         {
-            
+            int[] refirence = null;
+            db.RecordNewsOne(news.Headline, news.Text, news.Keyword,
+                             news.ImageURL, news.Site, news.Categore, refirence);
         }
 
         private void EntryList(ArrayList list)

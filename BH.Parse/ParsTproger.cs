@@ -10,6 +10,7 @@ namespace TestParserAndOther
 {
     class ParsTproger : IPars
     {
+        BD.BD db = new BD.BD();
         private string url = "https://tproger.ru/";
         const string category = "IT";
         const string site = "tproger.ru";
@@ -54,7 +55,9 @@ namespace TestParserAndOther
 
         private void Add(DataNews news)
         {
-
+            int[] refirence = null;
+            db.RecordNewsOne(news.Headline, news.Text, news.Keyword,
+                             news.ImageURL, news.Site, news.Categore, refirence);
         }
 
         private void EntryList(ArrayList list)

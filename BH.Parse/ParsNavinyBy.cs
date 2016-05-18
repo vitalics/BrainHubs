@@ -9,6 +9,7 @@ namespace TestParserAndOther
 {
     class ParsNavinyBy : IPars
     {
+        BD.BD db = new BD.BD();
         private string url = "http://naviny.by/rubrics/";
         private string[] categories = { "politic", "economic", "society", "abroad", "sport" };
         const string site = "naviny.by";
@@ -55,7 +56,9 @@ namespace TestParserAndOther
 
         private void Add(DataNews news)
         {
-
+            int[] refirence = null;
+            db.RecordNewsOne(news.Headline, news.Text, news.Keyword,
+                             news.ImageURL, news.Site, news.Categore, refirence);
         }
 
         private void EntryList(ArrayList list)

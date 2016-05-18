@@ -10,10 +10,10 @@ namespace BH.WEB.Controllers
 {
     public class AccountController : ApiController
     {
-        BD.BD bd = new BD.BD();
+        BD.BD db = new BD.BD();
         public bool Get(string login, string password)
         {
-            if (bd.ChekAccount(login,password))
+            if (db.ChekAccount(login,password))
             {
                 return true;
             }
@@ -23,11 +23,9 @@ namespace BH.WEB.Controllers
             }
         }
 
-        public void PutRegistor(string header, string textNews, string keyword,
-         string image, string link, string nameCategory, int idReference)
+        public void PutRegistor(string email, string login, string password)
         {
-            bd.RecordNewsOne(header, textNews, keyword,
-                image, link, nameCategory, idReference);
+            db.RecordNewMan(email, login, password);
         }
     }
 }

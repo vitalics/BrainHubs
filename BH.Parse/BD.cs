@@ -47,9 +47,9 @@ namespace BD
         	return result;
         }
 
-        public void RecordReferens(string reference)
+        public void RecordReferens(int id, int idReference)
         {
-        	builder(BDNews.InsertReference(reference));
+        	builder(BDNews.InsertReference(id, idReference));
 
         }
         public void RecordLikeNews(string email, int id)
@@ -59,7 +59,12 @@ namespace BD
         }
         public void RecordNewMan(string email, string login, string password)
         {
-          	builder(BDNews.Insertuser(email,login,password));
+          	builder(BDNews.InsertUser(email,login,password));
+
+        }
+        public void RecordFavouritCategory(string email, string favouriteCategory)
+        {
+            builder(BDNews.InsertFavouritCategory(email, favouriteCategory));
 
         }
         public bool ChekAccount(string login, string password)
@@ -88,7 +93,17 @@ namespace BD
         }
         public int GetReferens(int idNews)
         {
-        	return builder(BDNews.Selectedreference(idNews)); 
+        	return builder(BDNews.SelectedReference(idNews)); 
+        }
+
+        public int[] GetFavouritesNews(string email)
+        {
+            return builder(BDNews.SelectedFavouritesNews(email));
+        }
+
+        public string GetCategory(int id)
+        {
+            return uilder(BDNews.SelectedCategory(id));
         }
     }
 }

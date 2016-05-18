@@ -8,6 +8,7 @@ namespace TestParserAndOther
 {
     class DataNews
     {
+        int id;
         string headline;
         string imageURL;
         string text;
@@ -72,6 +73,14 @@ namespace TestParserAndOther
             get
             {
                 return headline;
+            }
+        }
+
+        public int Id
+        {
+            get
+            {
+                return id;
             }
         }
     }

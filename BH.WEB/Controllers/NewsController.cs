@@ -11,21 +11,21 @@ namespace BH.WEB.Controllers
     public class NewsController : ApiController
     {
         
-        BD.BD bd = new BD.BD();
+        BD.BD db = new BD.BD();
 
         public IEnumerable<DataNews> GetLastNews()
         {
-            return bd.GetNewsLast();
+            return db.GetNewsLast();
         }
 
         public IEnumerable<DataNews> GetLastNewsFoCategory(string category)
         {
-            return bd.GetLastForCategory(category);
+            return db.GetLastForCategory(category);
         }
 
         public void PutLikeNews(int id, string email)
         {
-            bd.RecordLikeNews(email, id);
+            db.RecordLikeNews(email, id);
         }
     }
 }
