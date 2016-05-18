@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BH.Parse;
 
 namespace TestParserAndOther
 {
@@ -44,7 +45,9 @@ namespace TestParserAndOther
             ArrayList textsArrayList = parsUrlParser.ParserArrayByTag("//*[@class='entry-content']", "/p");
             text = string.Join(null, textsArrayList.ToArray());
             string imageURL = parsUrlParser.ParserStringByAttributes("//*[@class='entry-image']/a/img", "src");
-            string keyword = "bsh"; //= считывать
+            SearchKeywords searchKeywords = new SearchKeywords(text);
+
+            string keyword = CreateStringKeywords(searchKeywords.GetKeywords);
             DataNews news = new DataNews(headline, imageURL, text, keyword, category, site);
             return news;
         }
@@ -61,6 +64,21 @@ namespace TestParserAndOther
                 DataNews news = GetDataNews(list[i].ToString());
                 Add(news);
             }
+        }
+
+        private string CreateStringKeywords(Dictionary<string, double> keywords)
+        {
+            string stringKeywords;
+
+            string[] arrayKeyword = new string[keywords.Count];
+
+            for (int i = 0; i < arrayKeyword.Length; i++)
+            {
+                arrayKeyword[i] = keywords[i].Key;
+            }
+            stringKeywords = string.Join(null, arrayKeyword);
+
+            return stringKeywords;
         }
     }
 }
