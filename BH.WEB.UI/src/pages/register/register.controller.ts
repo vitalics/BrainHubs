@@ -6,16 +6,26 @@ export class RegisterController {
     public password: string;
     public confirmPassword: string;
 
+    public errorMessage: string;
+
     constructor() {
 
     }
 
     public submit(): void {
-        if (this.password == this.confirmPassword) {
-            console.log(this.email, this.login, this.password);
+        if (this.checkPasswords()) {
+
+        } else {
+            this.errorMessage = 'passwords are not equals';
+        }
+    }
+
+    private checkPasswords(): boolean {
+        if (this.password === this.confirmPassword) {
+            return true;
         }
         else {
-            console.log('passwords must be coincide');
+            return false;
         }
     }
 }
