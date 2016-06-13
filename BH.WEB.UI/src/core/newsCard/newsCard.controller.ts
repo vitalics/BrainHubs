@@ -24,13 +24,18 @@ export class CardController {
         });
     }
     public showNews(): ng.IPromise<any> {
-        let news = this._$mdDialog.alert()
-            .title(this.title)
-            .textContent(this.text)
-            .clickOutsideToClose(true)
-            .ok('cancel')
-            .ok('OK');
-        let showNews = this._$mdDialog.show(news);
-        return showNews;
+        console.log('this is dialog!');
+        let news = this._$mdDialog.show({
+            templateUrl: '../newsDialog.tpl.html',
+            clickOutsideToClose: true
+        });
+        return news;
+        // let news = this._$mdDialog.alert()
+        //     .title(this.title)
+        //     .textContent(this.text)
+        //     .clickOutsideToClose(true)
+        //     .ok('OK');
+        // let showNews = this._$mdDialog.show(news);
+        // return showNews;
     }
 }
